@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.test.bafangcon.MainFragment">
+
+    <!-- Connection Status and Disconnect Button -->
+    <TextView
+        android:id="@+id/connectionStatusTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toStartOf="@+id/disconnectButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Status: Connected" />
+
+    <Button
+        android:id="@+id/disconnectButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/disconnect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/connectionStatusTextView"
+        app:layout_constraintBottom_toBottomOf="@id/connectionStatusTextView"/>
+
+    <!-- Request Buttons -->
+    <LinearLayout
+        android:id="@+id/requestButtonsLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/connectionStatusTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/requestControllerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="Controller"/>
+
+        <Button
+            android:id="@+id/requestMeterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Meter"/>
+        <Button
+            android:id="@+id/requestPersonalizedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gears"/>
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/lightSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Light " />
+
+    </LinearLayout>
+
+    <!-- Display Area -->
+    <TextView
+        android:id="@+id/controllerInfoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Controller Info:"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/requestButtonsLayout"/>
+
+    <TextView
+        android:id="@+id/controllerInfoTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/controllerInfoLabel"
+        tools:text="HW: 1.0, SW: 2.1, Power: 85%"/>
+
+
+    <TextView
+        android:id="@+id/meterInfoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Meter Info:"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/controllerInfoTextView"/>
+
+    <TextView
+        android:id="@+id/meterInfoTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/meterInfoLabel"
+        tools:text="Model: XYZ, ODO: 1234km"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

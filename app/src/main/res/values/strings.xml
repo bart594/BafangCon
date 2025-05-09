@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">BafangCon</string>
+    <string name="scan_start">Scan for E-Bikes</string>
+    <string name="scan_stop">Stop Scan</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="send_test_cmd">Send Test Cmd</string>
+    <string name="light_on">Light On</string>
+    <string name="light_off">Light Off</string>
+    <string name="log_label">Communication Log:</string>
+    <string name="status_scanning">Scanning...</string>
+    <string name="status_connecting">Connecting to %1$s...</string>
+    <string name="status_connected">Status: Connected to %1$s</string>
+    <string name="status_disconnected">Status: Disconnected</string>
+    <string name="status_failed">Status: Failed</string>
+    <string name="permissions_required">Bluetooth and Location permissions are required to scan for devices.</string>
+    <string name="permissions_denied">Permissions denied. Cannot scan for devices.</string>
+    <string name="connection_failed">Connection Failed</string>
+    <string name="connecting">Connecting</string>
+    <string name="scan_stopped">Scan Stopped</string>
+    <string name="connected">Connected</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="failed">Failed</string>
+    <string name="status_connected_permission_missing">No permission</string>
+</resources>
